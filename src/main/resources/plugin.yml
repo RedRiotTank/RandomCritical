@@ -1,0 +1,4 @@
+name: RandomCritical
+version: '1.0-SNAPSHOT'
+main: htt.randomCritical.RandomCritical
+api-version: '1.21'
