@@ -1,0 +1,4 @@
+critical:
+  damage_multiplier: 2.0
+  critical_rate: 0.2
+  knock_back: 1.5

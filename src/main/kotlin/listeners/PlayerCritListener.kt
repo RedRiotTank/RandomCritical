@@ -7,14 +7,13 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent
 import org.bukkit.util.Vector
 import kotlin.random.Random
 
-class PlayerCritListener : Listener {
+class PlayerCritListener(
+        private val damageMultiplier: Double,
+        private val criticalRate: Double,
+        private val knockbackMultiplier: Double
+) : Listener {
 
-    companion object {
-        val est = "static var"
-    }
 
-    private val CRIT_RATE = 0.2
-    private val CRIT_KNOCKBACK = 1.5
 
     @EventHandler
     fun onPlayerHit(event: EntityDamageByEntityEvent) {
@@ -23,10 +22,10 @@ class PlayerCritListener : Listener {
             val hitter = event.damager as LivingEntity
             val target = event.entity as LivingEntity
 
-            if(Random.nextDouble() < CRIT_RATE) {
-                event.damage *= 2
+            if(Random.nextDouble() < criticalRate) {
+                event.damage *= damageMultiplier
                 criticalKnockBack(target, hitter)
-                hitter.sendMessage("x2 damage critical hit")
+                hitter.sendMessage("x " + damageMultiplier + " damage critical hit")
             }
         }
     }
@@ -39,7 +38,7 @@ class PlayerCritListener : Listener {
 
         if (vector.length() > 0) vector = vector.normalize()
 
-        vector = vector.multiply(CRIT_KNOCKBACK)
+        vector = vector.multiply(knockbackMultiplier)
 
         vector.y = 0.5
 
