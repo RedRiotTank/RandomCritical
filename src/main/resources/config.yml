@@ -1,4 +1,8 @@
 critical:
-  damage_multiplier: 2.0
-  critical_rate: 0.2
-  knock_back: 1.5
+  damageMultiplier: 2.0
+  criticalRate: 0.2
+  knockBack: 1.5
+particles:
+  targetEnabled: true
+  targetDensity: 10
+  targetParticle: "CRIT"
