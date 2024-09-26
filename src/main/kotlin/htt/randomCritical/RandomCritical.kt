@@ -1,14 +1,25 @@
 package htt.randomCritical
 
+import config.RCConfig
+import listeners.PlayerCritListener
 import org.bukkit.plugin.java.JavaPlugin
 
+@Suppress("unused")
 class RandomCritical : JavaPlugin() {
 
+
     override fun onEnable() {
-        // Plugin startup logic
+        saveDefaultConfig()
+        RCConfig.initialize(config)
+
+        server.pluginManager.registerEvents(PlayerCritListener(), this)
+
+        logger.info("RandomCritical Plugin Enabled with Configured Values")
     }
 
     override fun onDisable() {
-        // Plugin shutdown logic
+        logger.info("RandomCritical Plugin Disabled")
     }
+
+
 }
