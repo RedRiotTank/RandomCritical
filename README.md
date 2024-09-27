@@ -1,6 +1,9 @@
 # RandomCritical ![Static Badge](https://img.shields.io/badge/Minecraft-%20v1.21-green) ![Static Badge](https://img.shields.io/badge/Plugin-blue) ![Static Badge](https://img.shields.io/badge/Easy%20to%20use-red) 
 
-RandomCritical is a plugin for minecraft servers that will allow you to add randomized critical hits when players or mobs do damage, customizing the critical rate, damage, knockback and adding different particles to 
+RandomCritical is a plugin for minecraft servers that will allow you to add randomized critical hits when players or mobs do damage, customizing the critical rate, damage, knockback and adding different particles to hot events.
+
+![Minecraft-1 21-Multiplayer-_3rd-party-Server_-2024-09-27-20-47-40-_online-video-cutter com_](https://github.com/user-attachments/assets/56beff8b-bf21-4e0e-8f2d-ef61fbeae846)
+
 
 ## Installing Plugin
 
